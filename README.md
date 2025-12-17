@@ -22,9 +22,9 @@ This pipeline automates the entire RNA-seq workflow, starting from raw FASTQ fil
 ---
 
 ## Pipeline Features
-- Quality control of raw reads (e.g., FastQC)  
-- Read alignment to reference genome (e.g., HISAT2/STAR)  
-- Gene quantification (featureCounts / htseq-count)  
+- Quality control of raw reads (FastQC)  
+- Read alignment to reference genome (STAR)  
+- Gene quantification (featureCounts)  
 - Differential expression analysis using **DESeq2**  
 - Visualization:  
   - Volcano plots  
