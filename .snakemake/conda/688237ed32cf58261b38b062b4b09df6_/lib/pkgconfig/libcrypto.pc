@@ -1,0 +1,12 @@
+prefix=/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/688237ed32cf58261b38b062b4b09df6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines-1.1
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.1.1w
+Libs: -L${libdir} -lcrypto
+Libs.private: -ldl -pthread 
+Cflags: -I${includedir}

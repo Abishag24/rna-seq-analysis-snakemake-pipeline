@@ -1,0 +1,115 @@
+Assuming unrestricted shared filesystem usage.
+host: DESKTOP-VIEMRHI
+Building DAG of jobs...
+Creating conda environment envs/featurecounts.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/featurecounts.yaml created (location: ../../snakemake_conda_envs/4196e176d72052697e2fd91f3864f270_)
+Creating conda environment envs/star.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/star.yaml created (location: ../../snakemake_conda_envs/d3f87ab989d34bca8e151605791c2382_)
+Creating conda environment envs/fastp.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/fastp.yaml created (location: ../../snakemake_conda_envs/7ef77202de42c4b735a4b2e7b7707ad3_)
+Creating conda environment envs/samtools.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/samtools.yaml created (location: ../../snakemake_conda_envs/056f7078098fd02068f52a93e7135132_)
+Creating conda environment envs/deseq2.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/deseq2.yaml:
+Command:
+conda env create --quiet --no-default-packages --file "/home/abishag/snakemake_conda_envs/80e88d8e854e61987ed8cfda192814d0_.yaml" --prefix "/home/abishag/snakemake_conda_envs/80e88d8e854e61987ed8cfda192814d0_"
+Output:
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+LibMambaUnsatisfiableError: Encountered problems while solving:
+  - package bioconductor-deseq2-1.42.0-r43hf17093f_0 requires r-ggplot2 >=3.4.0, but none of the providers can be installed
+  - package r-base-4.3.1-h5cdd412_4 requires libtiff >=4.6.0,<4.8.0a0, but none of the providers can be installed
+  - nothing provides r 3.2.2* needed by r-ggplot2-2.0.0-r3.2.2_0
+
+Could not solve for environment specs
+The following packages are incompatible
+├─ bioconductor-deseq2 =1.42.0 * is not installable because it requires
+│  └─ r-ggplot2 >=3.4.0 * but there are no viable options
+│     ├─ r-ggplot2 [3.4.0|3.4.1|...|3.5.2] would require
+│     │  └─ r-scales >=1.2.0 *, which conflicts with any installable versions previously reported;
+│     ├─ r-ggplot2 [4.0.0|4.0.1] would require
+│     │  └─ r-scales >=1.4.0 *, which conflicts with any installable versions previously reported;
+│     └─ r-ggplot2 3.4.0 would require
+│        └─ r-scales >=0.5.0 *, which conflicts with any installable versions previously reported;
+├─ r-base =4.3.1 * is not installable because there are no viable options
+│  ├─ r-base 4.3.1 would require
+│  │  └─ libtiff >=4.5.1,<4.6.0a0 * but there are no viable options
+│  │     ├─ libtiff [4.5.1|4.6.0] would require
+│  │     │  └─ libdeflate >=1.18,<1.19.0a0 *, which conflicts with any installable versions previously reported;
+│  │     └─ libtiff 4.5.1 conflicts with any installable versions previously reported;
+│  ├─ r-base 4.3.1 would require
+│  │  └─ libtiff >=4.6.0,<4.8.0a0 * but there are no viable options
+│  │     ├─ libtiff 4.6.0 would require
+│  │     │  └─ libdeflate >=1.20,<1.21.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff 4.6.0 would require
+│  │     │  └─ libdeflate >=1.19,<1.20.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff [4.6.0|4.7.0] would require
+│  │     │  └─ libdeflate >=1.21,<1.22.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff [4.5.1|4.6.0], which cannot be installed (as previously explained);
+│  │     ├─ libtiff [4.7.0|4.7.1] would require
+│  │     │  └─ libdeflate >=1.24,<1.25.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff 4.7.0 would require
+│  │     │  └─ libdeflate >=1.22,<1.23.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff 4.7.0 would require
+│  │     │  └─ libdeflate >=1.23,<1.24.0a0 *, which conflicts with any installable versions previously reported;
+│  │     ├─ libtiff 4.7.1 would require
+│  │     │  └─ libdeflate >=1.25,<1.26.0a0 *, which conflicts with any installable versions previously reported;
+│  │     └─ libtiff [4.7.0|4.7.1] conflicts with any installable versions previously reported;
+│  └─ r-base 4.3.1 conflicts with any installable versions previously reported;
+└─ r-ggplot2 =* * is not installable because there are no viable options
+   ├─ r-ggplot2 [3.4.0|3.4.1|...|3.5.2], which cannot be installed (as previously explained);
+   ├─ r-ggplot2 [4.0.0|4.0.1], which cannot be installed (as previously explained);
+   ├─ r-ggplot2 3.4.0, which cannot be installed (as previously explained);
+   ├─ r-ggplot2 2.2.1 would require
+   │  └─ r-reshape2 =* * but there are no viable options
+   │     ├─ r-reshape2 [1.4.2|1.4.3|1.4.4|1.4.5] would require
+   │     │  └─ r-stringr =* * but there are no viable options
+   │     │     ├─ r-stringr 1.1.0 would require
+   │     │     │  └─ r =3.3.1 *, which conflicts with any installable versions previously reported;
+   │     │     ├─ r-stringr [1.0.0|1.1.0|...|1.6.0] conflicts with any installable versions previously reported;
+   │     │     ├─ r-stringr 1.0.0 would require
+   │     │     │  └─ r-base =3.2.0 *, which does not exist (perhaps a missing channel);
+   │     │     ├─ r-stringr 1.0.0 would require
+   │     │     │  └─ r-base =3.2.1 *, which does not exist (perhaps a missing channel);
+   │     │     └─ r-stringr 1.0.0 would require
+   │     │        └─ r-base =3.2.2 *, which does not exist (perhaps a missing channel);
+   │     ├─ r-reshape2 1.4.1 would require
+   │     │  └─ r-base =3.2.0 *, which does not exist (perhaps a missing channel);
+   │     ├─ r-reshape2 1.4.1 would require
+   │     │  └─ r-base =3.2.1 *, which does not exist (perhaps a missing channel);
+   │     ├─ r-reshape2 1.4.1 would require
+   │     │  └─ r-base =3.2.2 *, which does not exist (perhaps a missing channel);
+   │     └─ r-reshape2 [1.4.1|1.4.2|1.4.3|1.4.4] conflicts with any installable versions previously reported;
+   ├─ r-ggplot2 [2.0.0|2.1.0] would require
+   │  └─ r =3.2.2 *, which does not exist (perhaps a missing channel);
+   ├─ r-ggplot2 [2.1.0|2.2.0] would require
+   │  └─ r =3.3.1 *, which conflicts with any installable versions previously reported;
+   ├─ r-ggplot2 2.2.1 would require
+   │  └─ r-base =3.3.1 *, which requires
+   │     └─ icu =54 *, which does not exist (perhaps a missing channel);
+   ├─ r-ggplot2 [2.1.0|2.2.0|...|3.3.6] conflicts with any installable versions previously reported;
+   ├─ r-ggplot2 1.0.1 would require
+   │  └─ r-base =3.2.0 *, which does not exist (perhaps a missing channel);
+   ├─ r-ggplot2 1.0.1 would require
+   │  └─ r-base =3.2.1 *, which does not exist (perhaps a missing channel);
+   └─ r-ggplot2 1.0.1 would require
+      └─ r-base =3.2.2 *, which does not exist (perhaps a missing channel).
+
+

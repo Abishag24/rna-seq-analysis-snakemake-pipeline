@@ -1,0 +1,5 @@
+==> 2025-12-17 13:34:34 <==
+# cmd: /home/abishag/miniconda3/bin/conda env create --quiet --no-default-packages --file /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/7da6c54a58bc85db9645a59cea3a8bcb_.yaml --prefix /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/7da6c54a58bc85db9645a59cea3a8bcb_
+# conda version: 25.11.1
++bioconda/linux-64::star-2.7.10b-h9ee0642_0
+# update specs: ['star']

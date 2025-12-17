@@ -1,0 +1,19 @@
+.dockerignore
+# Ignore data & results
+data/
+genome_index/
+qc/
+trimmed/
+aligned/
+counts/
+logs/
+
+# Ignore editor/temp files
+*.save
+^C
+*.log
+
+# Ignore Windows metadata
+*:Zone.Identifier
+.Rhistory
+

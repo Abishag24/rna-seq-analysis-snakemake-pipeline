@@ -1,0 +1,13 @@
+prefix=/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/688237ed32cf58261b38b062b4b09df6_
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libedit
+Description: command line editor library provides generic line editing, history, and tokenization functions.
+Version: 3.1
+Requires:
+Libs: -L${libdir} -ledit
+Libs.private: -lncurses 
+Cflags: -I${includedir} -I${includedir}/editline
+

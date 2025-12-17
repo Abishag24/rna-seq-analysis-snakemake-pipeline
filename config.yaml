@@ -1,0 +1,8 @@
+samples:
+  sample1:
+    r1: "data/sample1_R1.fastq.gz"
+    r2: "data/sample1_R2.fastq.gz"
+
+reference:
+  genome: "data/genome.fa"
+  gtf: "data/Saccharomyces_cerevisiae.R64-1-1.115.gtf"

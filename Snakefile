@@ -1,0 +1,116 @@
+
+SAMPLES = ["SRR5924196", "SRR5924197", "SRR5924198", "SRR5924276", "SRR5924277", "SRR5924278"]
+GTF="data/Saccharomyces_cerevisiae.R64-1-1.115.gtf"
+
+rule all:
+  input:
+         # input FastQC
+      expand("qc/{sample}_1_fastqc.html", sample=SAMPLES),
+      expand("qc/{sample}_2_fastqc.html", sample=SAMPLES),
+         # trimmed reads
+      expand("trimmed/{sample}_1.trimmed.fastq", sample=SAMPLES),
+      expand("trimmed/{sample}_2.trimmed.fastq", sample=SAMPLES),
+         # STAR BAM
+      expand("aligned/{sample}.Aligned.sortedByCoord.out.bam", sample=SAMPLES),
+         # BAM index
+      expand("aligned/{sample}.Aligned.sortedByCoord.out.bam.bai", sample=SAMPLES),
+         #featurecounts table
+      "counts/gene_counts.txt",
+         # DESeq2 outputs
+        "results/All_DEGs.csv",
+        "results/Upregulated_genes.csv",
+        "results/Downregulated_genes.csv",
+        "results/volcano.png",
+        "results/MA_plot.png"
+
+
+
+rule fastqc:
+  conda: "envs/fastqc.yaml"
+  input:
+       "data/{sample}_1.fastq",
+       "data/{sample}_2.fastq"
+  output:
+       "qc/{sample}_1_fastqc.html",
+       "qc/{sample}_1_fastqc.zip",
+       "qc/{sample}_2_fastqc.html",
+       "qc/{sample}_2_fastqc.zip"
+  shell:
+       "fastqc {input} -o qc"
+
+rule fastp:
+    conda: "envs/fastp.yaml"
+    input:
+        r1="data/{sample}_1.fastq",
+        r2="data/{sample}_2.fastq"
+    output:
+        r1_trim="trimmed/{sample}_1.trimmed.fastq",
+        r2_trim="trimmed/{sample}_2.trimmed.fastq",
+        html="trimmed/{sample}_fastp.html",
+        json="trimmed/{sample}_fastp.json"
+    shell:
+        """
+        fastp -i {input.r1} -I {input.r2} \
+              -o {output.r1_trim} -O {output.r2_trim} \
+              --html {output.html} \
+              --json {output.json} \
+              --thread 4
+        """
+
+rule star:
+    conda: "envs/star.yaml"
+    input:
+        r1="trimmed/{sample}_1.trimmed.fastq",
+        r2="trimmed/{sample}_2.trimmed.fastq",
+        index_dir="genome_index"  # star genome index folder
+    output:
+        bam="aligned/{sample}.Aligned.sortedByCoord.out.bam"
+    params:
+        prefix="aligned/{sample}."
+    threads: 4
+    shell:
+        """
+        mkdir -p aligned
+        STAR --runThreadN {threads} \
+             --genomeDir {input.index_dir} \
+             --readFilesIn {input.r1} {input.r2} \
+             --outFileNamePrefix {params.prefix} \
+             --outSAMtype BAM SortedByCoordinate
+        """
+rule bam_index:
+     conda: "envs/samtools.yaml"
+     input:
+        bam="aligned/{sample}.Aligned.sortedByCoord.out.bam"
+     output:
+        bai="aligned/{sample}.Aligned.sortedByCoord.out.bam.bai"
+     shell:
+        "samtools index {input.bam}"
+
+rule featurecounts:
+     conda: "envs/featurecounts.yaml"
+     input:
+          bam=[f"aligned/{s}.Aligned.sortedByCoord.out.bam" for s in SAMPLES],
+          gtf=GTF
+     output:
+          counts="counts/gene_counts.txt"
+     shell:
+         """
+          featureCounts -T 4 -p -a {input.gtf} -o {output.counts} {input.bam}
+          """
+rule deseq2:
+    input:
+        counts="counts/gene_counts.txt",
+        coldata="counts/Column_Data_new.csv"
+    output:
+        all_degs="results/All_DEGs.csv",
+        up="results/Upregulated_genes.csv",
+        down="results/Downregulated_genes.csv",
+        volcano="results/volcano.png",
+        ma="results/MA_plot.png"
+    conda:
+        "envs/deseq2.yaml"
+    shell:
+        """
+        Rscript --vanilla scripts/deseq2_analysis.R
+        """
+      

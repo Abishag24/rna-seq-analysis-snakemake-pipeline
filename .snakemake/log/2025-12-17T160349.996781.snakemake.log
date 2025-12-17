@@ -1,0 +1,324 @@
+Assuming unrestricted shared filesystem usage.
+host: DESKTOP-VIEMRHI
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+bam_index            6
+deseq2               1
+fastp                6
+fastqc               6
+featurecounts        1
+star                 6
+total               27
+
+Select jobs to execute...
+Execute 4 jobs...
+[Wed Dec 17 16:03:50 2025]
+localrule fastqc:
+    input: data/SRR5924197_1.fastq, data/SRR5924197_2.fastq
+    output: qc/SRR5924197_1_fastqc.html, qc/SRR5924197_1_fastqc.zip, qc/SRR5924197_2_fastqc.html, qc/SRR5924197_2_fastqc.zip
+    jobid: 2
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924197
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:03:50 2025]
+localrule fastp:
+    input: data/SRR5924197_1.fastq, data/SRR5924197_2.fastq
+    output: trimmed/SRR5924197_1.trimmed.fastq, trimmed/SRR5924197_2.trimmed.fastq, trimmed/SRR5924197_fastp.html, trimmed/SRR5924197_fastp.json
+    jobid: 8
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924197
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:03:50 2025]
+localrule fastp:
+    input: data/SRR5924196_1.fastq, data/SRR5924196_2.fastq
+    output: trimmed/SRR5924196_1.trimmed.fastq, trimmed/SRR5924196_2.trimmed.fastq, trimmed/SRR5924196_fastp.html, trimmed/SRR5924196_fastp.json
+    jobid: 7
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924196
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:03:50 2025]
+localrule fastp:
+    input: data/SRR5924277_1.fastq, data/SRR5924277_2.fastq
+    output: trimmed/SRR5924277_1.trimmed.fastq, trimmed/SRR5924277_2.trimmed.fastq, trimmed/SRR5924277_fastp.html, trimmed/SRR5924277_fastp.json
+    jobid: 11
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924277
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:01 2025]
+Finished jobid: 11 (Rule: fastp)
+1 of 27 steps (4%) done
+[Wed Dec 17 16:04:02 2025]
+Finished jobid: 7 (Rule: fastp)
+2 of 27 steps (7%) done
+Execute 2 jobs...
+[Wed Dec 17 16:04:02 2025]
+localrule fastp:
+    input: data/SRR5924276_1.fastq, data/SRR5924276_2.fastq
+    output: trimmed/SRR5924276_1.trimmed.fastq, trimmed/SRR5924276_2.trimmed.fastq, trimmed/SRR5924276_fastp.html, trimmed/SRR5924276_fastp.json
+    jobid: 10
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924276
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:04:02 2025]
+localrule fastp:
+    input: data/SRR5924278_1.fastq, data/SRR5924278_2.fastq
+    output: trimmed/SRR5924278_1.trimmed.fastq, trimmed/SRR5924278_2.trimmed.fastq, trimmed/SRR5924278_fastp.html, trimmed/SRR5924278_fastp.json
+    jobid: 12
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924278
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:04:02 2025]
+Finished jobid: 8 (Rule: fastp)
+3 of 27 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Dec 17 16:04:02 2025]
+localrule fastp:
+    input: data/SRR5924198_1.fastq, data/SRR5924198_2.fastq
+    output: trimmed/SRR5924198_1.trimmed.fastq, trimmed/SRR5924198_2.trimmed.fastq, trimmed/SRR5924198_fastp.html, trimmed/SRR5924198_fastp.json
+    jobid: 9
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924198
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:18 2025]
+Finished jobid: 10 (Rule: fastp)
+4 of 27 steps (15%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:18 2025]
+localrule fastqc:
+    input: data/SRR5924198_1.fastq, data/SRR5924198_2.fastq
+    output: qc/SRR5924198_1_fastqc.html, qc/SRR5924198_1_fastqc.zip, qc/SRR5924198_2_fastqc.html, qc/SRR5924198_2_fastqc.zip
+    jobid: 3
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924198
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:19 2025]
+Finished jobid: 12 (Rule: fastp)
+5 of 27 steps (19%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:19 2025]
+localrule fastqc:
+    input: data/SRR5924276_1.fastq, data/SRR5924276_2.fastq
+    output: qc/SRR5924276_1_fastqc.html, qc/SRR5924276_1_fastqc.zip, qc/SRR5924276_2_fastqc.html, qc/SRR5924276_2_fastqc.zip
+    jobid: 4
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924276
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:20 2025]
+Finished jobid: 9 (Rule: fastp)
+6 of 27 steps (22%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:20 2025]
+localrule fastqc:
+    input: data/SRR5924196_1.fastq, data/SRR5924196_2.fastq
+    output: qc/SRR5924196_1_fastqc.html, qc/SRR5924196_1_fastqc.zip, qc/SRR5924196_2_fastqc.html, qc/SRR5924196_2_fastqc.zip
+    jobid: 1
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924196
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:30 2025]
+Finished jobid: 4 (Rule: fastqc)
+7 of 27 steps (26%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:30 2025]
+localrule fastqc:
+    input: data/SRR5924278_1.fastq, data/SRR5924278_2.fastq
+    output: qc/SRR5924278_1_fastqc.html, qc/SRR5924278_1_fastqc.zip, qc/SRR5924278_2_fastqc.html, qc/SRR5924278_2_fastqc.zip
+    jobid: 6
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924278
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:31 2025]
+Finished jobid: 2 (Rule: fastqc)
+8 of 27 steps (30%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:31 2025]
+localrule fastqc:
+    input: data/SRR5924277_1.fastq, data/SRR5924277_2.fastq
+    output: qc/SRR5924277_1_fastqc.html, qc/SRR5924277_1_fastqc.zip, qc/SRR5924277_2_fastqc.html, qc/SRR5924277_2_fastqc.zip
+    jobid: 5
+    reason: Software environment definition has changed since last execution
+    wildcards: sample=SRR5924277
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:04:38 2025]
+Finished jobid: 3 (Rule: fastqc)
+9 of 27 steps (33%) done
+[Wed Dec 17 16:04:38 2025]
+Finished jobid: 1 (Rule: fastqc)
+10 of 27 steps (37%) done
+[Wed Dec 17 16:04:45 2025]
+Finished jobid: 6 (Rule: fastqc)
+11 of 27 steps (41%) done
+[Wed Dec 17 16:04:47 2025]
+Finished jobid: 5 (Rule: fastqc)
+12 of 27 steps (44%) done
+Execute 1 jobs...
+[Wed Dec 17 16:04:47 2025]
+localrule star:
+    input: trimmed/SRR5924198_1.trimmed.fastq, trimmed/SRR5924198_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924198.Aligned.sortedByCoord.out.bam
+    jobid: 15
+    reason: Input files updated by another job: trimmed/SRR5924198_1.trimmed.fastq, trimmed/SRR5924198_2.trimmed.fastq
+    wildcards: sample=SRR5924198
+    threads: 4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:05:58 2025]
+Finished jobid: 15 (Rule: star)
+13 of 27 steps (48%) done
+Execute 1 jobs...
+[Wed Dec 17 16:05:58 2025]
+localrule star:
+    input: trimmed/SRR5924196_1.trimmed.fastq, trimmed/SRR5924196_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924196.Aligned.sortedByCoord.out.bam
+    jobid: 13
+    reason: Input files updated by another job: trimmed/SRR5924196_2.trimmed.fastq, trimmed/SRR5924196_1.trimmed.fastq
+    wildcards: sample=SRR5924196
+    threads: 4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:07:19 2025]
+Finished jobid: 13 (Rule: star)
+14 of 27 steps (52%) done
+Execute 1 jobs...
+[Wed Dec 17 16:07:20 2025]
+localrule star:
+    input: trimmed/SRR5924278_1.trimmed.fastq, trimmed/SRR5924278_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924278.Aligned.sortedByCoord.out.bam
+    jobid: 18
+    reason: Input files updated by another job: trimmed/SRR5924278_2.trimmed.fastq, trimmed/SRR5924278_1.trimmed.fastq
+    wildcards: sample=SRR5924278
+    threads: 4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:08:57 2025]
+Finished jobid: 18 (Rule: star)
+15 of 27 steps (56%) done
+Execute 1 jobs...
+[Wed Dec 17 16:08:57 2025]
+localrule star:
+    input: trimmed/SRR5924276_1.trimmed.fastq, trimmed/SRR5924276_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924276.Aligned.sortedByCoord.out.bam
+    jobid: 16
+    reason: Input files updated by another job: trimmed/SRR5924276_2.trimmed.fastq, trimmed/SRR5924276_1.trimmed.fastq
+    wildcards: sample=SRR5924276
+    threads: 4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:10:35 2025]
+Finished jobid: 16 (Rule: star)
+16 of 27 steps (59%) done
+Execute 1 jobs...
+[Wed Dec 17 16:10:35 2025]
+localrule star:
+    input: trimmed/SRR5924277_1.trimmed.fastq, trimmed/SRR5924277_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924277.Aligned.sortedByCoord.out.bam
+    jobid: 17
+    reason: Input files updated by another job: trimmed/SRR5924277_2.trimmed.fastq, trimmed/SRR5924277_1.trimmed.fastq
+    wildcards: sample=SRR5924277
+    threads: 4
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Dec 17 16:15:42 2025]
+Finished jobid: 17 (Rule: star)
+17 of 27 steps (63%) done
+Execute 4 jobs...
+[Wed Dec 17 16:15:42 2025]
+localrule bam_index:
+    input: aligned/SRR5924196.Aligned.sortedByCoord.out.bam
+    output: aligned/SRR5924196.Aligned.sortedByCoord.out.bam.bai
+    jobid: 19
+    reason: Input files updated by another job: aligned/SRR5924196.Aligned.sortedByCoord.out.bam
+    wildcards: sample=SRR5924196
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:15:42 2025]
+localrule bam_index:
+    input: aligned/SRR5924198.Aligned.sortedByCoord.out.bam
+    output: aligned/SRR5924198.Aligned.sortedByCoord.out.bam.bai
+    jobid: 21
+    reason: Input files updated by another job: aligned/SRR5924198.Aligned.sortedByCoord.out.bam
+    wildcards: sample=SRR5924198
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:15:42 2025]
+localrule bam_index:
+    input: aligned/SRR5924277.Aligned.sortedByCoord.out.bam
+    output: aligned/SRR5924277.Aligned.sortedByCoord.out.bam.bai
+    jobid: 23
+    reason: Input files updated by another job: aligned/SRR5924277.Aligned.sortedByCoord.out.bam
+    wildcards: sample=SRR5924277
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:15:42 2025]
+localrule bam_index:
+    input: aligned/SRR5924276.Aligned.sortedByCoord.out.bam
+    output: aligned/SRR5924276.Aligned.sortedByCoord.out.bam.bai
+    jobid: 22
+    reason: Input files updated by another job: aligned/SRR5924276.Aligned.sortedByCoord.out.bam
+    wildcards: sample=SRR5924276
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:15:43 2025]
+Finished jobid: 22 (Rule: bam_index)
+18 of 27 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Dec 17 16:15:43 2025]
+localrule bam_index:
+    input: aligned/SRR5924278.Aligned.sortedByCoord.out.bam
+    output: aligned/SRR5924278.Aligned.sortedByCoord.out.bam.bai
+    jobid: 24
+    reason: Input files updated by another job: aligned/SRR5924278.Aligned.sortedByCoord.out.bam
+    wildcards: sample=SRR5924278
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:15:43 2025]
+Finished jobid: 23 (Rule: bam_index)
+19 of 27 steps (70%) done
+Select jobs to execute...
+[Wed Dec 17 16:15:44 2025]
+Finished jobid: 19 (Rule: bam_index)
+20 of 27 steps (74%) done
+[Wed Dec 17 16:15:44 2025]
+Finished jobid: 24 (Rule: bam_index)
+21 of 27 steps (78%) done
+[Wed Dec 17 16:15:44 2025]
+Finished jobid: 21 (Rule: bam_index)
+22 of 27 steps (81%) done
+Execute 1 jobs...
+[Wed Dec 17 16:15:44 2025]
+localrule star:
+    input: trimmed/SRR5924197_1.trimmed.fastq, trimmed/SRR5924197_2.trimmed.fastq, genome_index
+    output: aligned/SRR5924197.Aligned.sortedByCoord.out.bam
+    jobid: 14
+    reason: Input files updated by another job: trimmed/SRR5924197_1.trimmed.fastq, trimmed/SRR5924197_2.trimmed.fastq
+    wildcards: sample=SRR5924197
+    threads: 4
+    resources: tmpdir=/tmp
+[Wed Dec 17 16:17:12 2025]
+Finished jobid: 14 (Rule: star)
+23 of 27 steps (85%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Wed Dec 17 16:17:12 2025]
+localrule featurecounts:
+    input: aligned/SRR5924196.Aligned.sortedByCoord.out.bam, aligned/SRR5924197.Aligned.sortedByCoord.out.bam, aligned/SRR5924198.Aligned.sortedByCoord.out.bam, aligned/SRR5924276.Aligned.sortedByCoord.out.bam, aligned/SRR5924277.Aligned.sortedByCoord.out.bam, aligned/SRR5924278.Aligned.sortedByCoord.out.bam, data/Saccharomyces_cerevisiae.R64-1-1.115.gtf
+    output: counts/gene_counts.txt
+    jobid: 25
+    reason: Input files updated by another job: aligned/SRR5924278.Aligned.sortedByCoord.out.bam, aligned/SRR5924197.Aligned.sortedByCoord.out.bam, aligned/SRR5924198.Aligned.sortedByCoord.out.bam, aligned/SRR5924196.Aligned.sortedByCoord.out.bam, aligned/SRR5924276.Aligned.sortedByCoord.out.bam, aligned/SRR5924277.Aligned.sortedByCoord.out.bam
+    resources: tmpdir=/tmp
+Waiting at most 5 seconds for missing files:
+data/Saccharomyces_cerevisiae.R64-1-1.115.gtf (missing locally)
+WorkflowError in rule featurecounts in file "/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/Snakefile", line 89:
+OSError: Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+data/Saccharomyces_cerevisiae.R64-1-1.115.gtf (missing locally, parent dir contents: README.md)

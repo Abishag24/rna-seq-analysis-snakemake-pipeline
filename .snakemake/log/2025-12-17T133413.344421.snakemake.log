@@ -1,0 +1,35 @@
+Assuming unrestricted shared filesystem usage.
+host: DESKTOP-VIEMRHI
+Building DAG of jobs...
+Creating conda environment envs/samtools.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/samtools.yaml created (location: .snakemake/conda/688237ed32cf58261b38b062b4b09df6_)
+Creating conda environment envs/star.yaml...
+Downloading and installing remote packages.
+Cleaning up conda package tarballs.
+Environment for /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/star.yaml created (location: .snakemake/conda/7da6c54a58bc85db9645a59cea3a8bcb_)
+Creating conda environment envs/deseq2.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/deseq2.yaml:
+Command:
+conda env create --quiet --no-default-packages --file "/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/0e9729e6b6d7de0ff40b2aeee0534643_.yaml" --prefix "/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/.snakemake/conda/0e9729e6b6d7de0ff40b2aeee0534643_"
+Output:
+2 channel Terms of Service accepted
+Channels:
+ - bioconda
+ - conda-forge
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+LibMambaUnsatisfiableError: Encountered problems while solving:
+  - package r-ggplot2-3.4.4-r43h6115d3f_0 is excluded by strict repo priority
+  - package bioconductor-matrixgenerics-1.14.0-r43hdfd78af_0 requires r-matrixstats >=1.0.0, but none of the providers can be installed
+  - package bioconductor-deseq2-1.42.0-r43hf17093f_0 requires r-ggplot2 >=3.4.0, but none of the providers can be installed
+  - package r-base-4.2.2-h6b4767f_2 requires libtiff >=4.4.0,<4.5.0a0, but none of the providers can be installed
+
+
+

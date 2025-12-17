@@ -1,0 +1,215 @@
+{
+  "name": "subread",
+  "version": "2.0.3",
+  "build": "he4a0461_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "subread-2.0.3-he4a0461_3.tar.bz2",
+  "md5": "9cd2f95bd6f6e95743b2fa4fa3c60d5f",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/subread-2.0.3-he4a0461_3.tar.bz2",
+  "sha256": "dc2136c2e1c4e82dfc316dfbc15ef74030460db1996b8c34ebb4d2ec58804536",
+  "depends": [
+    "zlib",
+    "libgcc-ng >=12",
+    "libzlib >=1.2.13,<1.3.0a0"
+  ],
+  "constrains": [],
+  "license": "GPL-3.0-only",
+  "timestamp": 1684226506000,
+  "size": 24024196,
+  "requested_spec": "subread=2.0.3",
+  "package_tarball_full_path": "/home/abishag/miniconda3/pkgs/subread-2.0.3-he4a0461_3",
+  "extracted_package_dir": "/home/abishag/miniconda3/pkgs/subread-2.0.3-he4a0461_3",
+  "files": [
+    "annotation/hg19_RefSeq_exon.txt",
+    "annotation/hg38_RefSeq_exon.txt",
+    "annotation/mm10_RefSeq_exon.txt",
+    "annotation/mm9_RefSeq_exon.txt",
+    "bin/detectionCall",
+    "bin/exactSNP",
+    "bin/featureCounts",
+    "bin/flattenGTF",
+    "bin/genRandomReads",
+    "bin/propmapped",
+    "bin/qualityScores",
+    "bin/removeDup",
+    "bin/repair",
+    "bin/subindel",
+    "bin/subjunc",
+    "bin/sublong",
+    "bin/subread-align",
+    "bin/subread-buildindex",
+    "bin/subread-fullscan",
+    "bin/txUnique"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "annotation/hg19_RefSeq_exon.txt",
+        "path_type": "hardlink",
+        "sha256": "3e60486dd16a1ab7285dc97680b1e835de563fbaa04c5b8cb6af56fdf08c9134",
+        "size_in_bytes": 7171176,
+        "sha256_in_prefix": "3e60486dd16a1ab7285dc97680b1e835de563fbaa04c5b8cb6af56fdf08c9134"
+      },
+      {
+        "_path": "annotation/hg38_RefSeq_exon.txt",
+        "path_type": "hardlink",
+        "sha256": "787ff872da70d13536ad0db516767fe014324acf13fe4af9d0c12b8ad2041ad5",
+        "size_in_bytes": 8374242,
+        "sha256_in_prefix": "787ff872da70d13536ad0db516767fe014324acf13fe4af9d0c12b8ad2041ad5"
+      },
+      {
+        "_path": "annotation/mm10_RefSeq_exon.txt",
+        "path_type": "hardlink",
+        "sha256": "fe5911031dfcda774badb4b029c2c10dd4b2b11a503a43526646a427ec164f91",
+        "size_in_bytes": 7246621,
+        "sha256_in_prefix": "fe5911031dfcda774badb4b029c2c10dd4b2b11a503a43526646a427ec164f91"
+      },
+      {
+        "_path": "annotation/mm9_RefSeq_exon.txt",
+        "path_type": "hardlink",
+        "sha256": "fa187e4010c6dc8381fb8381f3acfff39ae7532b7925bfb196ae1ada92dec773",
+        "size_in_bytes": 7104174,
+        "sha256_in_prefix": "fa187e4010c6dc8381fb8381f3acfff39ae7532b7925bfb196ae1ada92dec773"
+      },
+      {
+        "_path": "bin/detectionCall",
+        "path_type": "hardlink",
+        "sha256": "40ea50c91d4b575f704932bebb19b6d8ad09ba19c34a1fe77fefe632e8cddac2",
+        "size_in_bytes": 2037416,
+        "sha256_in_prefix": "40ea50c91d4b575f704932bebb19b6d8ad09ba19c34a1fe77fefe632e8cddac2"
+      },
+      {
+        "_path": "bin/exactSNP",
+        "path_type": "hardlink",
+        "sha256": "5436a9dfcc0f58c4ae6c21a29cb51e362d6ca5018f113b15d59f92840182c75a",
+        "size_in_bytes": 2114504,
+        "sha256_in_prefix": "5436a9dfcc0f58c4ae6c21a29cb51e362d6ca5018f113b15d59f92840182c75a"
+      },
+      {
+        "_path": "bin/featureCounts",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "e08b3549e83fb7a3611a7f8ec05f9720d3b68903d63edec1b64c8f46162c6605",
+        "size_in_bytes": 2596040,
+        "sha256_in_prefix": "0b79547bc2b682a6c1c42a457d3028d497be8e35831afd8d25b6f79147c8c821"
+      },
+      {
+        "_path": "bin/flattenGTF",
+        "path_type": "hardlink",
+        "sha256": "dee298da5bcdf7d8587f53f39d70198546b26ccf29d94a31c84bf05b88a0f09f",
+        "size_in_bytes": 2023328,
+        "sha256_in_prefix": "dee298da5bcdf7d8587f53f39d70198546b26ccf29d94a31c84bf05b88a0f09f"
+      },
+      {
+        "_path": "bin/genRandomReads",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "73befd5c604ae35af8f705dbd6551ceb3f78cf3c51815d4a08a44149246fd876",
+        "size_in_bytes": 2068776,
+        "sha256_in_prefix": "685244edbfc8b4fe2eb046ca9a4621f659cdfca1a440e8d5a39b12268a17e24f"
+      },
+      {
+        "_path": "bin/propmapped",
+        "path_type": "hardlink",
+        "sha256": "4ac154db049a594f219caf8eac2575ce5a2f884faa9adff2e40f317cc48d8831",
+        "size_in_bytes": 2030432,
+        "sha256_in_prefix": "4ac154db049a594f219caf8eac2575ce5a2f884faa9adff2e40f317cc48d8831"
+      },
+      {
+        "_path": "bin/qualityScores",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "ef8afb63783e469b5cef9c13b35c8b35643a48d075b62c8ccc5e76e20b2677f5",
+        "size_in_bytes": 2036624,
+        "sha256_in_prefix": "268c8913c671581f748e318fcf07beecb20c6680def9f89d4133a488fad21eba"
+      },
+      {
+        "_path": "bin/removeDup",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "02f4117d3eea18ef34dc4abfdf08ff07af9b9e8aecca0611106ab1556dfd8973",
+        "size_in_bytes": 2025440,
+        "sha256_in_prefix": "a04b211280d469b063c7489f3f5db45ba468eff34b30ab9fd5efa1bfa5099511"
+      },
+      {
+        "_path": "bin/repair",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "8cc942a46f59038179e3e5722f830c45782e304a8759bb2b6303ad09c3972817",
+        "size_in_bytes": 2016728,
+        "sha256_in_prefix": "e06beb04938a83a7255dee84927cbc91dd56758aafd02035a88ab9f118321613"
+      },
+      {
+        "_path": "bin/subindel",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "ab519aa4403929943046924db9cedeeb03127d658e0be188b1140c644acb5b30",
+        "size_in_bytes": 2030032,
+        "sha256_in_prefix": "f6f62e8b0ccec87b63c2bf067d79c57abecf2647db9f553c9f3f13156eca6dc2"
+      },
+      {
+        "_path": "bin/subjunc",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "d987bc714bf5c5ed15f15850dc4553abe1128e514c04171ee8306212d63cda7d",
+        "size_in_bytes": 2053216,
+        "sha256_in_prefix": "3bcb4a39611fdd10ba13291e6b13512a0eaabffbaaacc4b7847d446d92a2ebad"
+      },
+      {
+        "_path": "bin/sublong",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "d1a036a904ca92a6605a488d652765f508062e121982fe8f13f620151f41cf7c",
+        "size_in_bytes": 325648,
+        "sha256_in_prefix": "85a969011f1e3baff21cded7ea3268ebab0bf9415959601b98196f5f9f793d15"
+      },
+      {
+        "_path": "bin/subread-align",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "102ed2cffd982fce1e5ce80013cf0a9c0929f8dbb651ee0af7bb25cad629ff0a",
+        "size_in_bytes": 2052792,
+        "sha256_in_prefix": "b5b20806e44f3a4b6a792e214c2df683c8b4477236f69f01246b0a691d2241f8"
+      },
+      {
+        "_path": "bin/subread-buildindex",
+        "prefix_placeholder": "/opt/conda/conda-bld/subread_1684226223731/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place",
+        "file_mode": "binary",
+        "path_type": "hardlink",
+        "sha256": "45d704da829c62a17a89097ed8ec18afb812cea12c2ef79cbc4f19d86e71c66c",
+        "size_in_bytes": 2071960,
+        "sha256_in_prefix": "109e8d520dc5217731d11f6212259b17615cc825c85289fc74aab730b552d794"
+      },
+      {
+        "_path": "bin/subread-fullscan",
+        "path_type": "hardlink",
+        "sha256": "52534e4b600eb2324bdb088589a4ed2818aa0508e4d6f608388367ae3bd57d54",
+        "size_in_bytes": 2018352,
+        "sha256_in_prefix": "52534e4b600eb2324bdb088589a4ed2818aa0508e4d6f608388367ae3bd57d54"
+      },
+      {
+        "_path": "bin/txUnique",
+        "path_type": "hardlink",
+        "sha256": "7f1cde7665dd0967fd0873cb2b2b107e86c1f90b053f739f66220ac158a493c8",
+        "size_in_bytes": 2034744,
+        "sha256_in_prefix": "7f1cde7665dd0967fd0873cb2b2b107e86c1f90b053f739f66220ac158a493c8"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/abishag/miniconda3/pkgs/subread-2.0.3-he4a0461_3",
+    "type": 1
+  }
+}

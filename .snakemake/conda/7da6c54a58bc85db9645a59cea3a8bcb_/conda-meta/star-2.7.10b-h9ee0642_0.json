@@ -1,0 +1,47 @@
+{
+  "name": "star",
+  "version": "2.7.10b",
+  "build": "h9ee0642_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/bioconda/linux-64",
+  "subdir": "linux-64",
+  "fn": "star-2.7.10b-h9ee0642_0.tar.bz2",
+  "md5": "360798cb23aa563a6628af0c1690a771",
+  "url": "https://conda.anaconda.org/bioconda/linux-64/star-2.7.10b-h9ee0642_0.tar.bz2",
+  "sha256": "7c5f7eb8158bef496b3122c3f831a69dc1ba128e90b313d8094b67fa91ce3025",
+  "depends": [],
+  "constrains": [],
+  "license": "GPLv3",
+  "timestamp": 1667315982000,
+  "size": 5175155,
+  "requested_spec": "star",
+  "package_tarball_full_path": "/home/abishag/miniconda3/pkgs/star-2.7.10b-h9ee0642_0",
+  "extracted_package_dir": "/home/abishag/miniconda3/pkgs/star-2.7.10b-h9ee0642_0",
+  "files": [
+    "bin/STAR",
+    "bin/STARlong"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/STAR",
+        "path_type": "hardlink",
+        "sha256": "7201abb6e88f5d8638f2030c5981d5a3ead7cefc497f92a906f505ab23768747",
+        "size_in_bytes": 7167584,
+        "sha256_in_prefix": "7201abb6e88f5d8638f2030c5981d5a3ead7cefc497f92a906f505ab23768747"
+      },
+      {
+        "_path": "bin/STARlong",
+        "path_type": "hardlink",
+        "sha256": "879731a20437f1608b13087d3fbc99706abe708ae26d6f6c892cfb588f60cb51",
+        "size_in_bytes": 7155232,
+        "sha256_in_prefix": "879731a20437f1608b13087d3fbc99706abe708ae26d6f6c892cfb588f60cb51"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/abishag/miniconda3/pkgs/star-2.7.10b-h9ee0642_0",
+    "type": 1
+  }
+}

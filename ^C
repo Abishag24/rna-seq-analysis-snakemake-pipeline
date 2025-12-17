@@ -1,0 +1,35 @@
+# Use an official bioinformatics container as base
+FROM biocontainers/biocontainers:debian-stable
+
+# Set working directory inside container
+WORKDIR /pipeline
+
+# Update and install required packages
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install conda
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh && \
+    bash /tmp/miniconda.sh -b -p /opt/conda && \
+    rm /tmp/miniconda.sh
+ENV PATH="/opt/conda/bin:$PATH"
+
+# Copy your environment YAML files
+COPY envs/ /pipeline/envs/
+
+# Create the DESeq2 environment
+RUN conda env create -f envs/deseq2.yaml
+
+# Activate the environment by default
+SHELL ["conda", "run", "-n", "deseq2", "/bin/bash", "-c"]
+
+# Copy your pipeline code
+COPY . /pipeline/
+
+# Set Snakemake as entrypoint
+ENTRYPOINT ["snakemake"]
+
