@@ -1,49 +1,34 @@
 # RNA-seq Analysis Snakemake Pipeline
 
-An end-to-end **RNA-seq differential expression analysis pipeline** implemented using **Snakemake**, covering quality control, read alignment, quantification, statistical analysis, and functional enrichment. This workflow is designed for reproducible, modular, and scalable RNA-seq analyses.
-
----
-
-## Table of Contents
-- [Overview](#overview)  
-- [Pipeline Features](#pipeline-features)  
-- [Folder Structure](#folder-structure)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Outputs](#outputs)  
-- [Dependencies / Tools](#dependencies--tools)  
-- [Author](#author)  
+An end-to-end **RNA-seq differential expression analysis pipeline** implemented using **Snakemake**.  
+The workflow is designed to be **reproducible, modular, and scalable**, and demonstrates standard RNA-seq data processing practices.
 
 ---
 
 ## Overview
-This pipeline automates the entire RNA-seq workflow, starting from raw FASTQ files to downstream analysis and visualization of differential gene expression. It is suitable for **single or multiple conditions**, and is built for reproducibility using Snakemake’s workflow management.
+This pipeline automates RNA-seq analysis starting from raw FASTQ files through read alignment, gene quantification, and differential expression analysis.
+
+Some downstream analyses (visualization and functional enrichment) are currently under active development.
 
 ---
 
 ## Pipeline Features
-- Quality control of raw reads (FastQC)  
-- Read alignment to reference genome (STAR)  
-- Gene quantification (featureCounts)  
-- Differential expression analysis using **DESeq2**  
-- Visualization:  
-  - Volcano plots  
-  - MA plots  
-  - PCA plots  
-  - Heatmaps  
-- Functional enrichment analysis (GO BP, MF, CC using clusterProfiler)  
-- Export of all results in organized directories
+- Quality control of raw reads (FastQC)
+- Read alignment to reference genome (STAR)
+- Gene-level quantification (featureCounts)
+- Differential expression analysis using **DESeq2** *(in progress)*
+- Visualization (PCA, volcano plots, heatmaps) *(planned)*
+- Functional enrichment analysis using **clusterProfiler** *(planned)*
 
 ---
 
 ## Folder Structure
 
 ```text
-├── workflow/                 # Snakemake workflow files (Snakefile, config)
-├── counts/                   # Gene count files
-├── results/                  # DE analysis results and plots
-├── scripts/                  # R scripts (DESeq2, visualization)
-├── data/                     # Reference genomes, annotation files
-├── logs/                     # Snakemake log files
-├── envs/                     # Conda environment YAML files
-└── README.md                 # Project README
+├── workflow/        # Snakemake workflow files (Snakefile, config)
+├── scripts/         # R scripts for DESeq2 and visualization
+├── data/            # Reference genome and annotation files
+├── results/         # Generated outputs (ignored in Git)
+├── logs/            # Log files (ignored in Git)
+├── envs/            # Conda environment YAML files
+└── README.md
