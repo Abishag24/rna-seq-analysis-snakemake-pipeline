@@ -44,7 +44,6 @@ This diagram shows the vertical workflow of our RNA-seq pipeline:
 ```text
 ├── workflow/                 # Snakemake workflow files (rules, modules)
 ├── Snakefile                 # Main Snakemake entry point
-├── config.yaml               # Pipeline configuration parameters
 ├── counts/                   # Gene count files (featureCounts output)
 ├── results/                  # Differential expression results and plots
 ├── images/                   # Plots displayed in README (PCA, volcano, heatmaps)
@@ -52,6 +51,7 @@ This diagram shows the vertical workflow of our RNA-seq pipeline:
 ├── data/                     # Reference genome and annotation files
 ├── logs/                     # Snakemake log files
 ├── envs/                     # Conda environment YAML files
+     ├── config.yaml          # Pipeline configuration parameters
 ├── docker/                   # Dockerfile and Docker usage instructions
 │   ├── Dockerfile             # Containerized environment for reproducibility
 │   └── README_Docker.md       # Instructions to run the pipeline with Docker
