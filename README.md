@@ -106,3 +106,5 @@ The workflow generates:
 ## Author
 Abishag Jacquline  
 [GitHub](https://github.com/Abishag24) | [LinkedIn](https://www.linkedin.com/in/abishagjacquline/)
+
+⚠️ Note: Runtime files, editor artifacts, and analysis outputs are excluded from version control to ensure full reproducibility.
