@@ -1,34 +1,108 @@
 # RNA-seq Analysis Snakemake Pipeline
 
-An end-to-end **RNA-seq differential expression analysis pipeline** implemented using **Snakemake**.  
-The workflow is designed to be **reproducible, modular, and scalable**, and demonstrates standard RNA-seq data processing practices.
+An end-to-end **RNA-seq differential expression analysis pipeline** implemented using **Snakemake**, covering quality control, read alignment, quantification, statistical analysis, and functional enrichment. This workflow is designed for reproducible, modular, and scalable RNA-seq analyses. Pipeline tested locally with public Saccharomyces cerevisiae RNA-seq data.
 
----
+**Status:** Work in progress | Tested locally with public Saccharomyces cerevisiae RNA-seq data  
+**Note:** Input data (FASTQ / reference / GTF) not included; users must provide.
+
+## Table of Contents
+- [Overview](#overview)  
+- [Pipeline Features](#pipeline-features)  
+- [Folder Structure](#folder-structure)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Outputs](#outputs)  
+- [Dependencies / Tools](#dependencies--tools)  
+- [Author](#author)  
+
 
 ## Overview
-This pipeline automates RNA-seq analysis starting from raw FASTQ files through read alignment, gene quantification, and differential expression analysis.
-
-Some downstream analyses (visualization and functional enrichment) are currently under active development.
-
----
+This pipeline automates the entire RNA-seq workflow, starting from raw FASTQ files to downstream analysis and visualization of differential gene expression. 
+** FASTQ → QC → Alignment → Counts → DE → Visualization → Enrichment **
+ It is suitable for **single or multiple conditions**, and is built for reproducibility using Snakemake’s workflow management. 
 
 ## Pipeline Features
-- Quality control of raw reads (FastQC)
-- Read alignment to reference genome (STAR)
-- Gene-level quantification (featureCounts)
-- Differential expression analysis using **DESeq2** *(in progress)*
-- Visualization (PCA, volcano plots, heatmaps) *(planned)*
-- Functional enrichment analysis using **clusterProfiler** *(planned)*
+- Quality control of raw reads (FastQC)  
+- Read alignment to reference genome (STAR)  
+- Gene quantification (featureCounts)  
+- Differential expression analysis using **DESeq2**  
+- Visualization:  
+  - Volcano plots  
+  - MA plots  
+  - PCA plots  
+  - Heatmaps  
+- Functional enrichment analysis (GO BP, MF, CC using clusterProfiler)  
+- Export of all results in organized directories
 
----
 
 ## Folder Structure
-
 ```text
-├── workflow/        # Snakemake workflow files (Snakefile, config)
-├── scripts/         # R scripts for DESeq2 and visualization
-├── data/            # Reference genome and annotation files
-├── results/         # Generated outputs (ignored in Git)
-├── logs/            # Log files (ignored in Git)
-├── envs/            # Conda environment YAML files
-└── README.md
+├── workflow/                 # Snakemake workflow files (Snakefile, config)
+├── counts/                   # Gene count files
+├── results/                  # DE analysis results and plots
+├── scripts/                  # R scripts (DESeq2, visualization)
+├── data/                     # Reference genomes, annotation files
+├── logs/                     # Snakemake log files
+├── envs/                     # Conda environment YAML files
+└── README.md                 # Project README
+```
+
+## Installation
+- Required Tools
+- [Snakemake](https://snakemake.readthedocs.io/en/stable/)
+- [Conda](https://docs.conda.io/en/latest/) 
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [STAR](https://github.com/alexdobin/STAR)
+- [featureCounts](http://bioinf.wehi.edu.au/featureCounts/)
+- [R](https://www.r-project.org/) with the following packages:
+- DESeq2
+- clusterProfiler
+
+# Usage
+
+1. Place your input files in the `data/` folder:
+   - Raw FASTQ files
+   - Reference genome (FASTA)
+   - Gene annotation (GTF)
+
+### Option 1 – Simple (default Snakefile paths)
+
+```bash
+snakemake --cores 4 --use-conda
+```
+
+2. Option 2 : Update the `config.yaml` file with your file paths.
+
+3. Run Snakemake:
+```bash
+snakemake --use-conda --configfile config.yaml --cores 4
+```
+### Input Data
+
+Users must provide:
+- Raw FASTQ files
+- Reference genome (FASTA)
+- Gene annotation (GTF)
+
+Place these files in the `data/` folder before running the pipeline.
+
+## Outputs
+The workflow generates:
+
+- `results/fastqc/` – FastQC HTML and zip reports
+- `counts/` – gene-level count tables from featureCounts
+- `results/deseq2/` – differential expression tables, plots, and summaries
+- `logs/` – Snakemake execution logs
+
+## Dependencies / Tools
+- Snakemake
+- Conda 
+- FastQC
+- STAR
+- featureCounts
+- R (DESeq2, clusterProfiler)
+- Python 3.x (for Snakemake)
+
+## Author
+Abishag Jacquline  
+[GitHub](https://github.com/Abishag24) | [LinkedIn](https://www.linkedin.com/in/abishagjacquline/)
