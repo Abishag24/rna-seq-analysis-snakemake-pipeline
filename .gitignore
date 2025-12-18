@@ -7,7 +7,6 @@
 # Alignments
 *.bam
 *.sam
-
 # Genome indexes
 genome_index/
 STARgenome/
@@ -32,3 +31,18 @@ envs/
 *.log
 .Rhistory
 nano.*
+*~
+^C
+
+# OS junk
+*Zone.Identifier
+
+# Results
+results/
+qc/
+aligned/
+counts/
+trimmed/
+
+# Windows metadata
+*Zone.Identifier
