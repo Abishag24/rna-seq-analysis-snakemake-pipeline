@@ -11,7 +11,7 @@ An end-to-end **RNA-seq differential expression analysis pipeline** implemented 
 - [Folder Structure](#folder-structure)  
 - [Installation](#installation)  
 - [Usage](#usage)
-- [Sample Plots Preview](#Sample Plots Preview)
+- [Sample Plots Preview](#Sample-Plots-Preview)
 - [Outputs](#outputs)  
 - [Dependencies / Tools](#dependencies--tools)  
 - [Author](#author)  
@@ -114,13 +114,13 @@ Place these files in the `data/` folder before running the pipeline.
 
 ## Sample Plots Preview 
    Volcano Plot
-   [VolcanoPlot]
+   [#VolcanoPlot]
    MA Plot
-   [MAPlot] 
+   [#MAPlot] 
    PCA Plot
-   [PCAPlot]
+   [#PCAPlot]
    Heatmap (Top DEGs)
-   [Heatmap]
+   [#Heatmap]
 
 ## Outputs
 The workflow generates:
