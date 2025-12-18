@@ -42,14 +42,22 @@ This diagram shows the vertical workflow of our RNA-seq pipeline:
 
 ## Folder Structure
 ```text
-├── workflow/                 # Snakemake workflow files (Snakefile, config)
-├── counts/                   # Gene count files
-├── results/                  # DE analysis results and plots
-├── scripts/                  # R scripts (DESeq2, visualization)
-├── data/                     # Reference genomes, annotation files
+├── workflow/                 # Snakemake workflow files (rules, modules)
+├── Snakefile                 # Main Snakemake entry point
+├── config.yaml               # Pipeline configuration parameters
+├── counts/                   # Gene count files (featureCounts output)
+├── results/                  # Differential expression results and plots
+├── images/                   # Plots displayed in README (PCA, volcano, heatmaps)
+├── scripts/                  # R scripts (DESeq2, visualization, enrichment)
+├── data/                     # Reference genome and annotation files
 ├── logs/                     # Snakemake log files
 ├── envs/                     # Conda environment YAML files
-└── README.md                 # Project README
+├── docker/                   # Dockerfile and Docker usage instructions
+│   ├── Dockerfile             # Containerized environment for reproducibility
+│   └── README_Docker.md       # Instructions to run the pipeline with Docker
+├── .gitignore                # Git ignore rules
+└── README.md                 # Project documentation
+
 ```
 
 ## Installation
@@ -80,8 +88,10 @@ snakemake --cores 4 --use-conda
 
 3. Run Snakemake:
 ```bash
-snakemake --use-conda --configfile config.yaml --cores 4
-```
+snakemake --use-conda --configfile envs/config.yaml --cores 4
+
+The pipeline uses a config.yaml file to define input files, parameters, and sample metadata.
+
 ### Input Data
 
 Users must provide:
