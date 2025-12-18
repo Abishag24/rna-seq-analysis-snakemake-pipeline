@@ -92,14 +92,17 @@ Users must provide:
 Place these files in the `data/` folder before running the pipeline.
 
 ## Sample Plots Preview 
-   Volcano Plot
-   [#VolcanoPlot]
-   MA Plot
-   [#MAPlot] 
-   PCA Plot
-   [#PCAPlot]
-   Heatmap (Top DEGs)
-   [#Heatmap]
+   **Volcano plot**
+   ![Volcano plot](images/volcano.png)
+   
+   **MA plot**
+   ![MA plot](images/MA.png)
+   
+   **PCA plot**
+   ![PCA plot](images/PCA.png)
+   
+   **Heatmap (Top DEGs**)
+   ![Heatmap](images/heatmap.png)
 
 ## Outputs
 The workflow generates:
