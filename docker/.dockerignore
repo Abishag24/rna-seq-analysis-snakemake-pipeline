@@ -1,0 +1,20 @@
+# Ignore raw data & results
+data/
+genome_index/
+qc/
+trimmed/
+aligned/
+counts/
+logs/
+
+# Ignore large & temp files
+*.fastq
+*.fastq.gz
+*.html
+*.zip
+*.json
+*.log
+
+# Ignore Windows metadata
+*:Zone.Identifier
+.Rhistory
