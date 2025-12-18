@@ -1,4 +1,0 @@
-Building DAG of jobs...
-WorkflowError:
-Failed to open source file /home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/deseq2.yaml
-FileNotFoundError: [Errno 2] No such file or directory: '/home/abishag/Snakemake_RNASeq/rna-seq-analysis-snakemake-pipeline/envs/deseq2.yaml'
