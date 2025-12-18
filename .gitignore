@@ -1,0 +1,34 @@
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Alignments
+*.bam
+*.sam
+
+# Genome indexes
+genome_index/
+STARgenome/
+hisat2_index/
+
+# Outputs
+aligned/
+trimmed/
+counts/
+qc/
+logs/
+
+# Snakemake
+.snakemake/
+
+# Conda
+.conda/
+envs/
+
+# OS / editor
+*.swp
+*.log
+.Rhistory
+nano.*
