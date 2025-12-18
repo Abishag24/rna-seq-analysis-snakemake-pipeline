@@ -19,36 +19,12 @@ An end-to-end **RNA-seq differential expression analysis pipeline** implemented 
 
 ## Overview
 This pipeline automates the entire RNA-seq workflow, starting from raw FASTQ files to downstream analysis and visualization of differential gene expression. 
-Raw FASTQ
-│
-▼
-Quality Control (FastQC)
-│
-▼
-Read Alignment (STAR)
-│
-▼
-Gene Quantification (featureCounts)
-│
-▼
-Differential Expression Analysis (DESeq2)
-│
-▼
-Visualization
-├─ Volcano Plot
-├─ MA Plot
-├─ PCA Plot
-└─ Heatmaps
-│
-▼
-Functional Enrichment
-├─ GO Biological Process (BP)
-├─ GO Molecular Function (MF)
-└─ GO Cellular Component (CC)
-│
-▼
-Results Export (CSV/PNG)
 It is suitable for **single or multiple conditions**, and is built for reproducibility using Snakemake’s workflow management. 
+
+## RNA-seq Analysis Pipeline
+This diagram shows the vertical workflow of our RNA-seq pipeline:
+
+![RNA-seq Workflow](images/rna_seq_workflow.png)
 
 ## Pipeline Features
 - Quality control of raw reads (FastQC)  
