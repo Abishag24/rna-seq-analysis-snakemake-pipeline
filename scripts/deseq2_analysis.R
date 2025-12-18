@@ -1,3 +1,25 @@
+###############################################################################
+# Script: deseq2_analysis.R
+# Purpose: Differential gene expression analysis using DESeq2
+# Organism: Saccharomyces cerevisiae
+#
+# Inputs:
+#   - counts/gene_counts.txt       (featureCounts output)
+#   - counts/Column_Data_new.csv   (sample metadata)
+#
+# Outputs:
+#   - results/All_DEGs.csv
+#   - results/Upregulated_genes.csv
+#   - results/Downregulated_genes.csv
+#   - QC and visualization plots (PCA, MA, Volcano, Heatmaps)
+#   - GO enrichment results
+#
+# Execution:
+#   This script is executed via Snakemake.
+#   Not intended to be run manually.
+#    
+#  Author: Abishag Jacquline
+###############################################################################
 
 #load the library 
 library(DESeq2)
@@ -10,11 +32,10 @@ library(org.Sc.sgd.db)
 library(AnnotationDbi)
 library(enrichplot)
 
-
-
 counts <- read.table("counts/gene_counts.txt", 
                      header=TRUE, sep="\t", comment.char = "#", check.names = FALSE)
 
+# Paths are fixed for standalone reproducibility
 
 
 #remove annotation columns and make count_matrix ready for DESeq2
@@ -172,11 +193,6 @@ up_genes <- rownames(resSigUp)
 # Downregulated genes
 down_genes <- rownames(resSigDown)
 
-
-write.csv(resSigUp, "results/Upregulated_genes.csv")
-write.csv(resSigDown, "results/Downregulated_genes.csv")
-
-
 # Variance-stabilizing transformation (for visualization)
 vsd <- vst(dds, blind=FALSE)
 mat <- assay(vsd)
@@ -195,6 +211,8 @@ length(sig_genes_heatmap)
 length(sig_genes_enrich)
 
 # ---- Heatmap of all significant DEGs ----
+
+set.seed(123)
 pheatmap(mat_sig,
          scale = "row",                      # row-wise normalization
          show_rownames = FALSE,
@@ -206,6 +224,7 @@ pheatmap(mat_sig,
 
 # ---- Heatmap of top 100 most variable DEGs ----
 
+set.seed(123)
 if (nrow(mat_sig) > 5) {
   top_genes <- head(order(rowVars(mat_sig), decreasing=TRUE), 50)
   pheatmap(mat_sig[top_genes, ],
@@ -227,6 +246,7 @@ percentVar <- round(100 * attr(pca_data, "percentVar"))
 png("results/PCA.png",
     width = 1200, height = 1000, res = 150)
 
+set.seed(123)
 ggplot(pca_data, aes(PC1, PC2, color=condition)) +
   geom_point(size=4) +
   xlab(paste0("PC1: ", percentVar[1], "% variance")) +
@@ -388,6 +408,7 @@ write.csv(as.data.frame(go_cc), "results/GO_CC.csv")
 # Save session info for reproducibility
 writeLines(capture.output(sessionInfo()),
            "results/sessionInfo.txt")
+
 
 
 
